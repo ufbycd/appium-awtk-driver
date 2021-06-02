@@ -1,6 +1,6 @@
 // transpile:mocha
 
-import MacDriver from '../..';
+import AwtkDriver from '../..';
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
@@ -14,7 +14,7 @@ chai.use(chaiAsPromised);
 describe('driver.js', function () {
   describe('constructor', function () {
     it('calls BaseDriver constructor with opts', function () {
-      let driver = new MacDriver({foo: 'bar'});
+      let driver = new AwtkDriver({foo: 'bar'});
       driver.should.exist;
       driver.opts.foo.should.equal('bar');
     });
@@ -22,8 +22,8 @@ describe('driver.js', function () {
 
   describe('createSession', function () {
     it('should set sessionId', async function () {
-      let driver = new MacDriver({app: 'myapp'}, false);
-      sinon.mock(driver).expects('startAppiumForMacSession')
+      let driver = new AwtkDriver({app: 'myapp'}, false);
+      sinon.mock(driver).expects('startAppiumForAwtkSession')
           .once()
           .returns(B.resolve());
       await driver.createSession({cap: 'foo'});
@@ -31,9 +31,9 @@ describe('driver.js', function () {
       driver.caps.cap.should.equal('foo');
     });
     it('should set sessionId (W3C)', async function () {
-      let driver = new MacDriver({app: 'myapp'}, false);
+      let driver = new AwtkDriver({app: 'myapp'}, false);
       driver.shouldValidateCaps = false;
-      sinon.mock(driver).expects('startAppiumForMacSession')
+      sinon.mock(driver).expects('startAppiumForAwtkSession')
           .once()
           .returns(B.resolve());
       await driver.createSession(null, null, {
@@ -48,7 +48,7 @@ describe('driver.js', function () {
   describe('proxying', function () {
     let driver;
     before(function () {
-      driver = new MacDriver({}, false);
+      driver = new AwtkDriver({}, false);
       driver.sessionId = 'abc';
     });
     describe('#proxyActive', function () {

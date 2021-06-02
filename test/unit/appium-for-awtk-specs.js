@@ -2,7 +2,7 @@
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import AppiumForMac from '../../lib/appium-for-mac';
+import AppiumForAwtk from '../../lib/appium-for-awtk';
 import { withSandbox } from 'appium-test-support';
 import B from 'bluebird';
 
@@ -10,18 +10,18 @@ import B from 'bluebird';
 chai.should();
 chai.use(chaiAsPromised);
 
-function buildAppiumForMacOpts () {
+function buildAppiumForAwtkOpts () {
   return {
     app: 'foo',
-    platformName: 'Mac',
+    platformName: 'Awtk',
     host: 'localhost',
     port: 4623
   };
 }
 
-describe('AppiumForMac', function () {
+describe('AppiumForAwtk', function () {
   describe('#startSession', withSandbox({}, (S) => {
-    let appium4MacDriver = new AppiumForMac(buildAppiumForMacOpts());
+    let appium4MacDriver = new AppiumForAwtk(buildAppiumForAwtkOpts());
 
     afterEach(function () {
       S.verify();
