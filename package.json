@@ -1,6 +1,6 @@
 {
   "name": "appium-awtk-driver",
-  "version": "1.10.0",
+  "version": "0.1.0",
   "description": "Appium bridge to AppiumForAwtk",
   "keywords": [
     "appium",
