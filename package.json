@@ -1,6 +1,6 @@
 {
-  "name": "@chenss/appium-awtk-driver",
-  "version": "0.1.0",
+  "name": "appium-awtk-driver",
+  "version": "0.1.1",
   "description": "Appium bridge to AppiumForAwtk",
   "keywords": [
     "appium",
@@ -32,6 +32,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "appium-awtk-driver": "^0.1.0",
     "appium-base-driver": "^5.0.0",
     "appium-support": "^2.36.0",
     "asyncbox": "^2.3.1",
