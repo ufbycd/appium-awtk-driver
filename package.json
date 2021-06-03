@@ -1,5 +1,5 @@
 {
-  "name": "appium-awtk-driver",
+  "name": "@chenss/appium-awtk-driver",
   "version": "0.1.0",
   "description": "Appium bridge to AppiumForAwtk",
   "keywords": [
@@ -11,10 +11,10 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zlgopen/appium-awtk-driver.git"
+    "url": "git+https://github.com/ufbycd/appium-awtk-driver.git"
   },
   "bugs": {
-    "url": "https://github.com/zlgopen/appium-awtk-driver/issues"
+    "url": "https://github.com/ufbycd/appium-awtk-driver/issues"
   },
   "engines": [
     "node"
@@ -75,7 +75,7 @@
   "greenkeeper": {
     "ignore": []
   },
-  "homepage": "https://github.com/zlgopen/appium-awtk-driver",
+  "homepage": "https://github.com/ufbycd/appium-awtk-driver",
   "eslintConfig": {
     "env": {
       "browser": true,
