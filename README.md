@@ -15,19 +15,7 @@ npm install appium appium-awtk-driver
 
 ### AWTK App
 
-add libraries to App: [awtk-restful-httpd](https://github.com/zlgopen/awtk-restful-httpd) [awtk-ui-automation](https://github.com/zlgopen/awtk-ui-automation)
-
-add `automation_agent_start` function on App initialization:
-
-```c
-ret_t application_init(void) {
-  socket_init();
-  automation_agent_start(8000);
-  window_main_create();
-
-  return RET_OK;
-}
-```
+[集成自动测试引擎](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_integrate_awtktk_ui_automation.md)
 
 ### Test script
 
